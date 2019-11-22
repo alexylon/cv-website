@@ -85,7 +85,7 @@ export default function Home() {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={8}>
+          <Grid container spacing={6}>
             <Grid item key={1} xs={12} sm={4} md={4}>
               <Card className={classes.card}>
                 <CardMedia
