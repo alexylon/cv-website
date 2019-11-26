@@ -19,7 +19,6 @@ import alex from "./images/alex.jpeg";
 import oca from "./images/oca.png";
 import Footer from "./footer";
 import Chip from "@material-ui/core/Chip";
-import Link from "@material-ui/core/Link";
 
 export default function Home() {
   const classes = useStyles();
