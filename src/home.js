@@ -8,36 +8,41 @@ import {
   Container,
   Avatar,
   Card,
-  CardMedia
+  CardMedia,
+  Button,
+  CardActions,
+  CardContent,
+  Chip
 } from "@material-ui/core/"
 
 import { useStyles } from "./styles"
 
 import alex from "./images/alex.jpeg"
 import Footer from "./footer"
-import { SkillsMore, SkillsLess } from "./skills"
-import { ExperienceMore, ExperienceLess } from "./experience"
-import { PassionMore, PassionLess } from "./passion"
+import { MoreExperience, MoreSkills, MorePassion } from "./more-text"
 import experienceImg from "./images/experience.jpg"
 import coding from "./images/coding.png"
 import theology from "./images/theology.jpeg"
+import oca from "./images/oca.png"
 
 export default function Home() {
   const classes = useStyles()
   const [open, setOpen] = useState(false)
-  const openHandler = () => setOpen(true)
-  const closeHandler = () => setOpen(false)
+  const toggleHandler = () => setOpen(!open)
   let skills
   let experience
   let passion
+  let buttonName
   if (open) {
-    skills = <SkillsMore closeHandler={closeHandler} />
-    experience = <ExperienceMore closeHandler={closeHandler} />
-    passion = <PassionMore closeHandler={closeHandler} />
+    experience = <MoreExperience />
+    skills = <MoreSkills />
+    passion = <MorePassion />
+    buttonName = "LESS"
   } else {
-    skills = <SkillsLess openHandler={openHandler} />
-    experience = <ExperienceLess openHandler={openHandler} />
-    passion = <PassionLess openHandler={openHandler} />
+    skills = ""
+    experience = ""
+    passion = ""
+    buttonName = "MORE"
   }
 
   return (
@@ -100,37 +105,100 @@ export default function Home() {
             */}
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
-            <Grid item key={1} xs={12} sm={4} md={4}>
+            <Grid item key={1} xs={12} sm={12} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
                   image={experienceImg}
                   title="experience"
                 />
-                {experience}
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Experience
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    Product Manager & Furniture Engineer{" "}
+                  </Typography>
+                  <p>
+                    With rich background as a Technical Product Manager I aim to
+                    implement my abilities in the profession of a Web Developer.
+                  </p>
+                  {experience}
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary" onClick={toggleHandler}>
+                    {buttonName}
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
-            <Grid item key={2} xs={12} sm={4} md={4}>
+            <Grid item key={2} xs={12} sm={12} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
                   image={coding}
                   title="coding"
                 />
-                {skills}
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Coding Skills
+                  </Typography>
+                  <div className={classes.root}>
+                    <Chip
+                      avatar={<Avatar alt="OCA" src={oca} />}
+                      label="Java, Oracle Certified Associate"
+                      component="a"
+                      href="https://www.youracclaim.com/badges/13918dd1-e5ad-4e81-96c6-95fcb6fb8b3c"
+                      clickable
+                      color="primary"
+                      variant="outlined"
+                    />
+                    <Chip label="JavaScript" variant="outlined" />
+                    <Chip label="React.js" variant="outlined" />
+                    <Chip label="Next.js" variant="outlined" />
+                    <Chip label="TypeScript" variant="outlined" />
+                    <Chip label="HTML" variant="outlined" />
+                    <Chip label="CSS" variant="outlined" />
+                    <Chip label="GraphQL" variant="outlined" />
+                    <Chip label="SQL" variant="outlined" />
+                  </div>
+                  {skills}
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary" onClick={toggleHandler}>
+                    {buttonName}
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
-            <Grid item key={3} xs={12} sm={4} md={4}>
+
+            <Grid item key={3} xs={12} sm={12} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
                   image={theology}
                   title="theology"
                 />
-                {passion}
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Passion
+                  </Typography>
+                  <Typography variant="subtitle1">PhD in Theology</Typography>
+                  <p>
+                    Passionate about understanding the Bible, Theology, and what
+                    it means to be a Christian today - Theological Studies
+                    contributed a lot.
+                  </p>
+                  {passion}
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary" onClick={toggleHandler}>
+                    {buttonName}
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           </Grid>
