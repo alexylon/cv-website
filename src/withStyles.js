@@ -1,6 +1,9 @@
-import { makeStyles } from "@material-ui/core/styles"
+import React from "react"
+import PropTypes from "prop-types"
+import { withStyles } from "@material-ui/core/styles"
+import Button from "@material-ui/core/Button"
 
-export const useStyles = makeStyles(theme => ({
+const styles = theme=> {
   root: {
     display: "flex",
     justifyContent: "justify",
@@ -42,8 +45,19 @@ export const useStyles = makeStyles(theme => ({
     margin: 10
   },
   bigAvatar: {
-    margin: 5,
-    width: 65,
-    height: 65
+    margin: 10,
+    width: 60,
+    height: 60
   }
-}))
+}
+
+function HigherOrderComponent(props) {
+  const { classes } = props
+  return <Button className={classes.root}>Higher-order component</Button>
+}
+
+HigherOrderComponent.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(HigherOrderComponent)
