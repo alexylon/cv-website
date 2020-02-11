@@ -42,8 +42,8 @@ export const useStyles = makeStyles(theme => ({
     margin: 10
   },
   bigAvatar: {
-    margin: 5,
-    width: 65,
-    height: 65
+    margin: 10,
+    width: 70,
+    height: 70
   }
 }))
