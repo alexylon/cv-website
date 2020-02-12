@@ -188,8 +188,8 @@ export default function Home() {
                   </Typography>
                   <Typography variant="subtitle1">PhD in Theology</Typography>
                   <p>
-                    Passionate about understanding the Bible, Theology, and what
-                    it means to be a Christian today - Theological Studies
+                    Passionate about understanding spirituality and what it
+                    means to be a Christian today - Theological Studies
                     contributed a lot.
                   </p>
                   {passion}
