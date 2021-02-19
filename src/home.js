@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import {
   AppBar,
   CssBaseline,
@@ -12,37 +12,37 @@ import {
   Button,
   CardActions,
   CardContent,
-  Chip
-} from "@material-ui/core/"
+  Chip,
+} from "@material-ui/core/";
 
-import { useStyles } from "./styles"
+import { useStyles } from "./styles";
 
-import alex from "./images/alex.jpeg"
-import Footer from "./footer"
-import { MoreExperience, MoreSkills, MorePassion } from "./more-text"
-import experienceImg from "./images/experience.jpg"
-import coding from "./images/coding.png"
-import theology from "./images/theology.jpeg"
-import oca from "./images/oca.png"
+import alex from "./images/alex.jpeg";
+import Footer from "./footer";
+import { MoreExperience, MoreSkills, MorePassion } from "./more-text";
+import experienceImg from "./images/experience.jpg";
+import coding from "./images/coding.png";
+import theology from "./images/theology.jpeg";
+import oca from "./images/oca.png";
 
 export default function Home() {
-  const classes = useStyles()
-  const [open, setOpen] = useState(false)
-  const toggleHandler = () => setOpen(!open)
-  let skills
-  let experience
-  let passion
-  let buttonName
+  const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const toggleHandler = () => setOpen(!open);
+  let skills;
+  let experience;
+  let passion;
+  let buttonName;
   if (open) {
-    experience = <MoreExperience />
-    skills = <MoreSkills />
-    passion = <MorePassion />
-    buttonName = "LESS"
+    experience = <MoreExperience />;
+    skills = <MoreSkills />;
+    passion = <MorePassion />;
+    buttonName = "LESS";
   } else {
-    skills = ""
-    experience = ""
-    passion = ""
-    buttonName = "MORE"
+    skills = "";
+    experience = "";
+    passion = "";
+    buttonName = "MORE";
   }
 
   return (
@@ -120,12 +120,17 @@ export default function Home() {
                     Experience
                   </Typography>
                   <Typography variant="subtitle1">
-                    Product Manager & Furniture Engineer{" "}
+                    Junior Software Developer{" "}
                   </Typography>
-                  <p>
-                    With rich background as a Technical Product Manager I aim to
-                    implement my abilities in the profession of a Web Developer.
-                  </p>
+                  <ul>
+                    <li>
+                      Java Developer at DXC <br /> (Apr 2020 - present)
+                    </li>
+                    <li>
+                      Web Developer Intern at Camplight <br />
+                      (Sep 2019 - Apr 2020)
+                    </li>
+                  </ul>
                   {experience}
                 </CardContent>
                 <CardActions>
@@ -156,14 +161,16 @@ export default function Home() {
                       color="primary"
                       variant="outlined"
                     />
-                    <Chip label="JavaScript" variant="outlined" />
+                    <Chip label="Spring MVC" variant="outlined" />
+                    <Chip label="Maven" variant="outlined" />
+                    <Chip label="PostgreSQL" variant="outlined" />
+                    <Chip label="JavaScript / TypeScript" variant="outlined" />
                     <Chip label="React.js" variant="outlined" />
                     <Chip label="Next.js" variant="outlined" />
-                    <Chip label="TypeScript" variant="outlined" />
                     <Chip label="HTML" variant="outlined" />
                     <Chip label="CSS" variant="outlined" />
                     <Chip label="GraphQL" variant="outlined" />
-                    <Chip label="SQL" variant="outlined" />
+                    <Chip label="Git" variant="outlined" />
                   </div>
                   {skills}
                 </CardContent>
@@ -208,5 +215,5 @@ export default function Home() {
       <Footer />
       {/* End footer */}
     </React.Fragment>
-  )
+  );
 }

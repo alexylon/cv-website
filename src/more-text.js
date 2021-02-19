@@ -4,21 +4,18 @@ export const MoreExperience = () => {
   return (
     <p>
       <p>KEY RESPONSIBILITIES:</p>
+      
+
+
       <ul>
         <li>
           {" "}
-          Specifying market requirements for current and future products by
-          conducting market research.
+          Producing clean, efficient code based on specifications;
         </li>
-        <li> Analyzing potential partner relationships for the product.</li>
-        <li>Managing and coaching the sales force of the key distributors.</li>
-        <li>
-          {" "}
-          Organizing product presentations as well as trainings for particular
-          target groups.
-        </li>
-        <li> Negotiating and execution contracts with suppliers.</li>
-        <li> Preparing market, product, sales and financial analysis.</li>
+        <li> Testing and deploying programs and systems;</li>
+        <li>Fixing and improving existing software;</li>
+        <li> Gather and evaluate user feedback;</li>
+        <li> Recommend and execute improvements.</li>
       </ul>
     </p>
   )
@@ -38,7 +35,7 @@ export const MorePassion = () => {
     <>
       <p>VOLUNTEERING:</p>
       <ul>
-        <li>Orphanage volunteer programs.</li>
+        <li>Orphanage volunteer programs;</li>
         <li>Sunday school teaching.</li>
       </ul>
     </>
