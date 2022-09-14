@@ -1,38 +1,33 @@
 import React from "react";
-import Link from "@material-ui/core/Link";
-import { useStyles } from "./styles";
-import Typography from "@material-ui/core/Typography";
-import MailIcon from "@material-ui/icons/Mail";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import {Typography, Link} from "@mui/material";
+import {useStyles} from "./styles";
+import MailIcon from "@mui/icons-material/Mail";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Footer() {
-  const classes = useStyles();
-  return (
-    <footer className={classes.footer}>
-      <Typography
-        variant="subtitle1"
-        align="center"
-        color="textSecondary"
-        component="p"
-      >
-        <Link color="inherit" href="https://www.facebook.com/innoxius">
-          <FacebookIcon className={classes.icon} />
-        </Link>
-        <Link
-          color="inherit"
-          href="https://www.linkedin.com/in/alexandrovalexander/"
-        >
-          <LinkedInIcon className={classes.icon} />
-        </Link>
-        <Link color="inherit" href="mailto:euax@icloud.com">
-          <MailIcon className={classes.icon} />
-        </Link>
-        <Link color="inherit" href="https://github.com/alexylon/alex-site">
-          <GitHubIcon className={classes.icon} />
-        </Link>{" "}
-      </Typography>
-    </footer>
-  );
+    const classes = useStyles();
+    return (
+        <footer className={classes.footer}>
+            <Typography
+                variant="subtitle1"
+                align="center"
+                color="textSecondary"
+                component="p"
+            >
+                <Link
+                    color="inherit"
+                    href="https://www.linkedin.com/in/alexandrovalexander/"
+                >
+                    <LinkedInIcon className={classes.icon}/>
+                </Link>
+                <Link color="inherit" href="mailto:cv@lexandrov.cc">
+                    <MailIcon className={classes.icon}/>
+                </Link>
+                <Link color="inherit" href="https://github.com/alexylon">
+                    <GitHubIcon className={classes.icon}/>
+                </Link>{" "}
+            </Typography>
+        </footer>
+    );
 }

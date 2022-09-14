@@ -1,11 +1,19 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import {render} from 'react-dom';
+import {ThemeProvider} from '@mui/styles';
 import Home from "./home"
+import {createTheme} from "@mui/material";
 
-class App extends React.Component {
-  render() {
-    return <Home />
-  }
+const theme = createTheme();
+
+function App() {
+    return (
+        <ThemeProvider theme={theme}>
+            <Home/>
+        </ThemeProvider>
+    )
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+const container = document.getElementById('root');
+
+render(<App/>, container);
