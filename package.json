@@ -1,6 +1,6 @@
 {
-  "name": "alex-site",
-  "homepage": "https://www.alexandroff.me/",
+  "name": "cv-website",
+  "homepage": "https://cv.alexandrov.cc/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
