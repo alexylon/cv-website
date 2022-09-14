@@ -84,8 +84,9 @@ export default function Home() {
                             color="textSecondary"
                             paragraph
                         >
-                            I am motivated, educated and active person who wishes to apply
-                            their knowledge, skills and experience to new challenges
+                            I'm a permanent student, reader, and learner.
+                            <br/>
+                            Software engineering is my passion and I find it most satisfying to help interpret creative ideas into useful software tools.
                         </Typography>
                         {/*
             <div className={classes.heroButtons}>
@@ -199,7 +200,7 @@ export default function Home() {
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Passion
+                                        Avocation
                                     </Typography>
                                     <Typography  gutterBottom variant="subtitle1" component="h2">
                                         PhD in Theology
