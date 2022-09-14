@@ -19,29 +19,29 @@ import {useStyles} from "./styles";
 
 import alex from "./images/alex.jpeg";
 import Footer from "./footer";
-import {MoreExperience, MoreSkills, MoreAvocation} from "./more-text";
+import {MoreHistory, MoreSkills, MoreSummary} from "./more-text";
 import experienceImg from "./images/experience.jpg";
 import coding from "./images/rust.png";
-import theology from "./images/theology.jpeg";
+import theology from "./images/summary.jpg";
 import oca from "./images/oca.png";
 
 export default function Home() {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const toggleHandler = () => setOpen(!open);
+    let history;
     let skills;
-    let experience;
-    let avocation;
+    let summary;
     let buttonName;
     if (open) {
-        experience = <MoreExperience/>;
+        history = <MoreHistory/>;
         skills = <MoreSkills/>;
-        avocation = <MoreAvocation/>;
+        summary = <MoreSummary/>;
         buttonName = "LESS";
     } else {
         skills = "";
-        experience = "";
-        avocation = "";
+        history = "";
+        summary = "";
         buttonName = "MORE";
     }
 
@@ -85,8 +85,6 @@ export default function Home() {
                             paragraph
                         >
                             I'm a permanent student, reader, and learner.
-                            <br/>
-                            Software engineering is my passion and I find it most satisfying to help interpret creative ideas into useful software tools.
                         </Typography>
                         {/*
             <div className={classes.heroButtons}>
@@ -118,7 +116,7 @@ export default function Home() {
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Experience
+                                        Career History
                                     </Typography>
                                     <ul>
                                         <li>
@@ -128,8 +126,36 @@ export default function Home() {
                                             Web Developer Intern at Camplight <br/>
                                             (Sep 2019 - Apr 2020)
                                         </li>
+                                        <li>
+                                            Product Manager at KAME <br/>
+                                            (Dec 1999 - Mar 2020)
+                                        </li>
                                     </ul>
-                                    {experience}
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Education
+                                    </Typography>
+                                    <ul>
+                                        <li>
+                                            Camplight <br/> (React.js Fundamentals, Apr 2020)
+                                        </li>
+                                        <li>
+                                            Sofia University <br/>
+                                            (PhD of Theology, 2019)
+                                        </li>
+                                        <li>
+                                            MaxPlus <br/>
+                                            (Java 8 Fundamentals, 2018)
+                                        </li>
+                                        <li>
+                                            University of Forestry <br/>
+                                            (Master of Engineering, 1997)
+                                        </li>
+                                        <li>
+                                            High School of Mathematics <br/>
+                                            (Mathematics, 1990)
+                                        </li>
+                                    </ul>
+                                    {history}
                                 </CardContent>
                                 <CardActions>
                                     <Button size="small" color="primary" onClick={toggleHandler}>
@@ -147,7 +173,7 @@ export default function Home() {
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Skills
+                                        Tech Skills
                                     </Typography>
                                     <Typography gutterBottom variant="subtitle1" component="h2">
                                         Programming Languages:
@@ -200,17 +226,18 @@ export default function Home() {
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Avocation
-                                    </Typography>
-                                    <Typography  gutterBottom variant="subtitle1" component="h2">
-                                        PhD in Theology
+                                        Profile Summary
                                     </Typography>
                                     <p>
-                                        Passionate about understanding spirituality and what it
-                                        means to be a Christian today - Theological Studies
-                                        contributed a lot.
+                                        Software engineering is my passion and I find it most satisfying to help interpret creative ideas into useful software tools.
+                                        <br/>
+                                        I value being in an environment where there is good opportunity to learn and where there are interesting technology challenges to encounter.
+                                        <br/>
+                                        I'm a fullstack engineer by trade. Keeping up with programming languages, frameworks, and design patterns is the permanent education we sign up for, yet it's also the means by which we work our creative magic. I believe it is important not to become compartmentalized or to let a skill set stagnate.
+                                        <br/>
+                                        My tech love remains Rust programming language. In this context as a theologian I would exclaim along with the timeless Bible verse "but the greatest of these is love" also "but the greatest of these is Rust".
                                     </p>
-                                    {avocation}
+                                    {summary}
                                 </CardContent>
                                 <CardActions>
                                     <Button size="small" color="primary" onClick={toggleHandler}>
