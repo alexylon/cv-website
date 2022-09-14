@@ -21,7 +21,7 @@ export const MoreSkills = () => {
         </>
     )
 }
-export const MorePassion = () => {
+export const MoreAvocation = () => {
     return (
         <>
             <br/>

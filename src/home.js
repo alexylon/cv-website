@@ -19,7 +19,7 @@ import {useStyles} from "./styles";
 
 import alex from "./images/alex.jpeg";
 import Footer from "./footer";
-import {MoreExperience, MoreSkills, MorePassion} from "./more-text";
+import {MoreExperience, MoreSkills, MoreAvocation} from "./more-text";
 import experienceImg from "./images/experience.jpg";
 import coding from "./images/rust.png";
 import theology from "./images/theology.jpeg";
@@ -31,17 +31,17 @@ export default function Home() {
     const toggleHandler = () => setOpen(!open);
     let skills;
     let experience;
-    let passion;
+    let avocation;
     let buttonName;
     if (open) {
         experience = <MoreExperience/>;
         skills = <MoreSkills/>;
-        passion = <MorePassion/>;
+        avocation = <MoreAvocation/>;
         buttonName = "LESS";
     } else {
         skills = "";
         experience = "";
-        passion = "";
+        avocation = "";
         buttonName = "MORE";
     }
 
@@ -210,7 +210,7 @@ export default function Home() {
                                         means to be a Christian today - Theological Studies
                                         contributed a lot.
                                     </p>
-                                    {passion}
+                                    {avocation}
                                 </CardContent>
                                 <CardActions>
                                     <Button size="small" color="primary" onClick={toggleHandler}>
