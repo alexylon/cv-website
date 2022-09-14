@@ -1,18 +1,18 @@
 import React, {useState} from "react";
 import {
     AppBar,
+    Avatar,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Chip,
+    Container,
     CssBaseline,
     Grid,
     Toolbar,
     Typography,
-    Container,
-    Avatar,
-    Card,
-    CardMedia,
-    Button,
-    CardActions,
-    CardContent,
-    Chip,
 } from "@mui/material";
 
 import {useStyles} from "./styles";
@@ -39,16 +39,16 @@ export default function Home() {
         summary = <MoreSummary/>;
         buttonName = "LESS";
     } else {
-        skills = "";
         history = "";
+        skills = "";
         summary = "";
         buttonName = "MORE";
     }
 
     return (
-        <React.Fragment>
+        <>
             <CssBaseline/>
-            <AppBar position="relative">
+            <AppBar position="relative" component="nav" sx={{backgroundColor: '#073e64'}} style={{position: 'fixed'}}>
                 <Toolbar>
                     <Avatar alt="alex" src={alex} className={classes.bigAvatar}/>
                     <Typography variant="h6" color="inherit" noWrap>
@@ -57,7 +57,6 @@ export default function Home() {
                 </Toolbar>
             </AppBar>
             <main>
-                {/* Hero unit */}
                 <div className={classes.heroContent}>
                     <Container maxWidth="sm">
                         <Typography
@@ -65,7 +64,6 @@ export default function Home() {
                             variant="h4"
                             align="center"
                             color="textPrimary"
-                            gutterBottom
                         >
                             HAPPINESS
                         </Typography>
@@ -82,26 +80,9 @@ export default function Home() {
                             variant="h5"
                             align="center"
                             color="textSecondary"
-                            paragraph
                         >
                             I'm a permanent student, reader, and learner.
                         </Typography>
-                        {/*
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-            */}
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="lg">
@@ -216,7 +197,6 @@ export default function Home() {
                                 </CardActions>
                             </Card>
                         </Grid>
-
                         <Grid item key={3} xs={12} sm={12} md={4}>
                             <Card className={classes.card}>
                                 <CardMedia
@@ -229,13 +209,20 @@ export default function Home() {
                                         Profile Summary
                                     </Typography>
                                     <p>
-                                        Software engineering is my passion and I find it most satisfying to help interpret creative ideas into useful software tools.
+                                        Software engineering is my passion and I find it most satisfying to help
+                                        interpret creative ideas into useful software tools.
                                         <br/>
-                                        I value being in an environment where there is good opportunity to learn and where there are interesting technology challenges to encounter.
+                                        I value being in an environment where there is good opportunity to learn and
+                                        where there are interesting technology challenges to encounter.
                                         <br/>
-                                        I'm a fullstack engineer by trade. Keeping up with programming languages, frameworks, and design patterns is the permanent education we sign up for, yet it's also the means by which we work our creative magic. I believe it is important not to become compartmentalized or to let a skill set stagnate.
+                                        I'm a fullstack engineer by trade. Keeping up with programming languages,
+                                        frameworks, and design patterns is the permanent education we sign up for, yet
+                                        it's also the means by which we work our creative magic. I believe it is
+                                        important not to become compartmentalized or to let a skill set stagnate.
                                         <br/>
-                                        My tech love remains Rust programming language. In this context as a theologian I would exclaim along with the timeless Bible verse "but the greatest of these is love" also "but the greatest of these is Rust".
+                                        My tech love remains Rust programming language. In this context as a theologian
+                                        I would exclaim along with the timeless Bible verse "but the greatest of these
+                                        is love" also "but the greatest of these is Rust".
                                     </p>
                                     {summary}
                                 </CardContent>
@@ -252,6 +239,6 @@ export default function Home() {
             {/* Footer */}
             <Footer/>
             {/* End footer */}
-        </React.Fragment>
+        </>
     );
 }

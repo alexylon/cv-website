@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography, Link} from "@mui/material";
+import {Link, Typography} from "@mui/material";
 import {useStyles} from "./styles";
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
